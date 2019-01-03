@@ -1,0 +1,18 @@
+zuul:
+  ignored-services: /*
+  routes:
+    msgtask:
+      path: /msgtask/**
+      service-id: msgtask
+ribbon:
+  ReadTimeout: 3000000
+  SocketTimeout: 3000000
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 3000000
+auth:
+  md5: AmWay_01234MsgCenter_12345
